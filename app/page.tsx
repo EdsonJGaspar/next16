@@ -22,7 +22,17 @@ export default function Home() {
                 Font Lusitana
               </p>
             </div>
-            <div>imagem</div>
+            <div>
+              <Image
+                src={
+                  "https://images.unsplash.com/photo-1789007793855-7ba74161eb4b?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+                alt="Imagem Unplass"
+                width={300}
+                height={500}
+                className="object-cover"
+              />
+            </div>
           </div>
           <div>
             <Image
