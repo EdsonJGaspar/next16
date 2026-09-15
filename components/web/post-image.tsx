@@ -2,7 +2,7 @@ import { cn } from "cn";
 import Image from "next/image";
 import { ComponentProps } from "react";
 
-interface PostImageProps extends ComponentProps<"image"> {
+interface PostImageProps extends ComponentProps<"img"> {
   imageFileName: string;
 }
 

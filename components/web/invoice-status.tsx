@@ -1,6 +1,6 @@
 import { Invoice } from "@/lib/definitions";
 import { invoices } from "@/lib/placeholder-data";
-import { clsx } from "clsx";
+import { clsx } from "cn";
 
 export function InvoiceStatus({ status }: { status: string }) {
   return (
