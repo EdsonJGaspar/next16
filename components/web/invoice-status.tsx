@@ -1,4 +1,3 @@
-import { Invoice } from "@/lib/definitions";
 import { invoices } from "@/lib/placeholder-data";
 import { clsx } from "cn";
 
