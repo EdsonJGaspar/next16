@@ -5,3 +5,12 @@ export type Invoice = {
   date: string;
   status: "pendente" | "pago";
 };
+
+export type PostsProp = {
+  userId: number;
+  id: string;
+  title: string;
+  body: string;
+};
+
+export type PostsProps = PostsProp[];

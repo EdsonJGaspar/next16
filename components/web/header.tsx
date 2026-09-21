@@ -9,6 +9,7 @@ const links = [
   { name: "Home", href: "/dashboard", icon: HomeIcon },
   { name: "Costumers", href: "/dashboard/costumers", icon: User },
   { name: "Invoices", href: "/dashboard/invoices", icon: UserGroupIcon },
+  { name: "Posts", href: "/dashboard/posts", icon: UserGroupIcon },
 ];
 
 export function Header() {
