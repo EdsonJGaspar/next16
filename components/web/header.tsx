@@ -1,7 +1,7 @@
 "use client";
 
 import { clsx } from "cn";
-import { HomeIcon, User, UserGroupIcon, UserRoundGroup } from "lucide-react";
+import { HomeIcon, StickyNote, User, UserGroupIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -9,7 +9,7 @@ const links = [
   { name: "Home", href: "/dashboard", icon: HomeIcon },
   { name: "Costumers", href: "/dashboard/costumers", icon: User },
   { name: "Invoices", href: "/dashboard/invoices", icon: UserGroupIcon },
-  { name: "Posts", href: "/dashboard/posts", icon: UserGroupIcon },
+  { name: "Posts", href: "/dashboard/posts", icon: StickyNote },
 ];
 
 export function Header() {
