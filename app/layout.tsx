@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Geist_Mono, JetBrains_Mono } from "next/font/google";
+import ThemeProvider from "@/components/web/theme-provider";
 
 const fontSans = Geist_Mono({
   subsets: ["latin"],
@@ -27,7 +28,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         `h-full ${fontSans.variable} ${fontMono.variable} antialiased`,
       )}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
