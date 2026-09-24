@@ -17,7 +17,7 @@ export function Header() {
   console.log(pathName);
 
   return (
-    <div className="h-dvh w-14 hover:w-44 text-slate-700 font-semibold flex flex-col justify-between transition-all duration-300 group overflow-hidden">
+    <div className="h-dvh w-14 hover:w-44 text-slate-700 font-semibold flex flex-col justify-between transition-all duration-300 group overflow-hidden border">
       <div className="flex flex-col gap-5">
         <Link href={"/"}>Home</Link>
         <nav className="flex flex-col gap-2 ">
