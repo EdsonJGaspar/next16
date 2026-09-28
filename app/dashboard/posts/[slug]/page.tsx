@@ -1,6 +1,5 @@
-"use client";
+import { ImageWidht } from "@/components/web/image";
 import { getPost } from "@/lib/data";
-import Image from "next/image";
 
 interface PostsBlogSlugProps {
   params: Promise<{ slug: string }>;
@@ -21,14 +20,7 @@ export default async function PostsBlogSlug({ params }: PostsBlogSlugProps) {
         <p>{post.body}</p>
       </section>
       <section>
-        <Image
-          src={"/images/alicate-flux.jpeg"}
-          width={200}
-          height={155}
-          alt=""
-          className="pointer-events-none select-none"
-          onContextMenu={(e) => e.preventDefault()}
-        />
+        <ImageWidht />
       </section>
     </main>
   );
