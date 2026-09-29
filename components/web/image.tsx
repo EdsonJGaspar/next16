@@ -8,7 +8,7 @@ export function ImageWidht() {
       src={"/images/alicate-flux.jpeg"}
       width={200}
       height={155}
-      alt=""
+      alt="Imagem de alicate"
       draggable={false}
       onContextMenu={(e) => e.preventDefault()}
     />
