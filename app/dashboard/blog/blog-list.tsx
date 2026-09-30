@@ -1,3 +1,6 @@
+import { getPosts } from "@/lib/data";
+import { use } from "react";
+
 interface BlogProps {
   id: number;
   title: string;
@@ -7,21 +10,21 @@ interface BlogProps {
   category: string;
 }
 
-export async function BlogList() {
-  const data = await fetch("https://api.vercel.app/blog");
-  const blog: BlogProps[] = await data.json();
+export function BlogList({ posts }: { posts: Promise<BlogProps[]> }) {
+  const allPosts = use(posts);
   return (
     <div>
-      <ul className="p-6 space-y-2">
-        {blog.map((blog) => (
-          <li key={blog.id} className="border rounded-lg px-3 p-1">
-            <h3 className="text-lg font-medium flex justify-between items-center">
-              {blog.title}
-            </h3>
-            <p>{blog.content}</p>
-          </li>
-        ))}
-      </ul>
+      <ul className="p-6 space-y-2"></ul>
+      {allPosts.map((post, i) => (
+        <li key={i}>
+          <h2>{post.title} </h2>
+          <p>{post.content}</p>
+          <p className="space-x-3">
+            <span>{post.author}</span>
+            <span>{post.date}</span>
+          </p>
+        </li>
+      ))}
     </div>
   );
 }

@@ -24,3 +24,13 @@ export async function getAllPosts(): Promise<PostsProps> {
 
   return data;
 }
+
+export async function getPosts() {
+  const response = await fetch("https://api.vercel.app/blog");
+
+  if (!response.ok) {
+    throw new Error("Falha na requisição dos posts");
+  }
+  const data = await response.json();
+  return data;
+}
