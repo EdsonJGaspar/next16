@@ -1,4 +1,4 @@
-import { getPosts } from "@/lib/data";
+"use client";
 import { use } from "react";
 
 interface BlogProps {
@@ -17,7 +17,7 @@ export function BlogList({ posts }: { posts: Promise<BlogProps[]> }) {
       <ul className="p-6 space-y-2"></ul>
       {allPosts.map((post, i) => (
         <li key={i}>
-          <h2>{post.title} </h2>
+          <h2 className="text-lg font-medium ">{post.title} </h2>
           <p>{post.content}</p>
           <p className="space-x-3">
             <span>{post.author}</span>
